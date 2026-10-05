@@ -37,7 +37,7 @@ select
 from public.papers p
 where p.paper_type = 'question'
   and p.file_url is not null
-  and p.file_url ~* '\\.pdf([?#].*)?$';
+  and p.file_url ~* '[.]pdf([?#].*)?$';
 
 grant select on public.downloadable_papers to anon, authenticated;
 
@@ -45,4 +45,4 @@ create index if not exists papers_pdf_library_idx
 on public.papers (year desc, subject)
 where paper_type = 'question'
   and file_url is not null
-  and file_url ~* '\\.pdf([?#].*)?$';
+  and file_url ~* '[.]pdf([?#].*)?$';
