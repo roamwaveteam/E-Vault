@@ -18,6 +18,13 @@ npm run lint
 npm run build
 ```
 
+## PDF paper library
+
+The frontend now exposes only paper records with a PDF URL and `paper_type = 'question'`.
+Users can search and filter by exam, year, and subject, open a read-only browser viewer, or follow the source download link. The app does not upload, rewrite, or provide editing tools for source PDFs.
+
+For the library to load in the browser, the Supabase project must keep the public `SELECT` policy on `exam_families` and `papers` enabled. PDF hosting remains controlled by the original source URL; cross-origin hosts may choose whether the browser honors the HTML download hint.
+
 ## Supabase
 
 The connected project is **E-Vault** (`zbbyfyduavuovsfmqiac`, `eu-west-2`). The database now contains the Exam Vault schema:
