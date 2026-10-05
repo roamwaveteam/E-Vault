@@ -31,10 +31,8 @@ function App() {
       const [familyResult, paperResult] = await Promise.all([
         supabase.from('exam_families').select('id, code, name').order('name'),
         supabase
-          .from('papers')
+          .from('downloadable_papers')
           .select('id, exam_family_id, year, session, subject, paper_number, title, file_url, availability')
-          .eq('paper_type', 'question')
-          .not('file_url', 'is', null)
           .order('year', { ascending: false })
           .order('subject'),
       ])
