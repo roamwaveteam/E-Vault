@@ -5,11 +5,11 @@ function App() {
   const isConnected = Boolean(supabase)
   return (
     <main className="shell">
-      <nav className="nav"><span className="brand">E-Vault</span><span className="status"><i /> {isConnected ? 'Supabase configured' : 'Local setup'}</span></nav>
+      <nav className="nav"><span className="brand">Exam Vault</span><span className="status"><i /> {isConnected ? 'Supabase configured' : 'Local setup'}</span></nav>
       <section className="hero">
         <p className="eyebrow">Student learning, kept simple</p>
-        <h1>Your learning space is ready to build.</h1>
-        <p className="lede">A clean starting point for lessons, notes, and progress. Connect the database when the first feature is ready.</p>
+        <h1>Your exam archive is ready to build.</h1>
+        <p className="lede">A searchable home for Cameroon examination papers, organized by exam, year, subject, and department.</p>
         <div className="actions"><a className="button primary" href="https://supabase.com/dashboard" target="_blank" rel="noreferrer">Open Supabase</a><a className="button secondary" href="https://vite.dev/guide/" target="_blank" rel="noreferrer">Read Vite docs</a></div>
       </section>
       <section className="cards" aria-label="Development status">
